@@ -28,7 +28,7 @@ class SoftDeletableExtension extends BehaviorExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('listener'))
-			->setClass('Knp\DoctrineBehaviors\ORM\SoftDeletable\SoftDeletableListener', [
+			->setClass('Knp\DoctrineBehaviors\ORM\SoftDeletable\SoftDeletableSubscriber', [
 				'@' . $this->getClassAnalyzer()->getClass(),
 				$config['isRecursive'],
 				$config['trait']

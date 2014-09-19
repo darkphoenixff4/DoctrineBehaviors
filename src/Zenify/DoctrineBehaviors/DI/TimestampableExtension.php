@@ -28,7 +28,7 @@ class TimestampableExtension extends BehaviorExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('listener'))
-			->setClass('Knp\DoctrineBehaviors\ORM\Timestampable\TimestampableListener', [
+			->setClass('Knp\DoctrineBehaviors\ORM\Timestampable\TimestampableSubscriber', [
 				'@' . $this->getClassAnalyzer()->getClass(),
 				$config['isRecursive'],
 				$config['trait']

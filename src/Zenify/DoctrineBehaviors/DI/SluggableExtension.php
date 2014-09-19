@@ -28,7 +28,7 @@ class SluggableExtension extends BehaviorExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('listener'))
-			->setClass('Knp\DoctrineBehaviors\ORM\Sluggable\SluggableListener', [
+			->setClass('Knp\DoctrineBehaviors\ORM\Sluggable\SluggableSubscriber', [
 				'@' . $this->getClassAnalyzer()->getClass(),
 				$config['isRecursive'],
 				$config['trait']

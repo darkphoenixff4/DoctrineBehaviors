@@ -31,7 +31,7 @@ class LoggableExtension extends BehaviorExtension
 		$loggerCallable = $this->buildDefinition($config['loggerCallable']);
 
 		$builder->addDefinition($this->prefix('listener'))
-			->setClass('Knp\DoctrineBehaviors\ORM\Loggable\LoggableListener', [
+			->setClass('Knp\DoctrineBehaviors\ORM\Loggable\LoggableSubscriber', [
 				'@' . $this->getClassAnalyzer()->getClass(),
 				$config['isRecursive'],
 				'@' . $loggerCallable->getClass()

@@ -33,7 +33,7 @@ class TranslatableExtension extends BehaviorExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('listener'))
-			->setClass('Knp\DoctrineBehaviors\ORM\Translatable\TranslatableListener', [
+			->setClass('Knp\DoctrineBehaviors\ORM\Translatable\TranslatableSubscriber', [
 				'@' . $this->getClassAnalyzer()->getClass(),
 				$config['isRecursive'],
 				$config['currentLocaleCallable'],
