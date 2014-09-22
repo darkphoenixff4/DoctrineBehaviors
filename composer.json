@@ -1,5 +1,5 @@
 {
-	"name": "darkphoenixff4/doctrine-behaviors",
+	"name": "zenify/doctrine-behaviors",
 	"description": "Port of KnpLabs/DoctrineBehaviors to Nette",
 	"license": "MIT",
 	"authors": [
